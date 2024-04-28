@@ -19,11 +19,9 @@ application {
 repositories {
     mavenCentral()
 }
-jar {
+tasks.withType<Jar> {
     manifest {
-        attributes(
-                'Main-Class': 'com.amarerichard.ApplicationKt'
-        )
+        attributes["Main-Class"] = "com.amarerichard.ApplicationKt"
     }
 }
 dependencies {
