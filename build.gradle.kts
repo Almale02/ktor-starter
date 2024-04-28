@@ -19,7 +19,13 @@ application {
 repositories {
     mavenCentral()
 }
-
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.amarerichard.ApplicationKt'
+        )
+    }
+}
 dependencies {
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
